@@ -24,6 +24,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   flutter_exoplayer: ^0.5.4
   permission_handler: ^4.0.0
+  transparent_image: ^1.0.0
 
 dev_dependencies:
   flutter_test:

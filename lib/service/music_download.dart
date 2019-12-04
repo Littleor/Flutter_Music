@@ -20,7 +20,7 @@ class Download {
   Download(){
     dio = new Dio();
   }
-  Future download( String url, savePath,String name) async {
+  Future<void> download( String url, savePath,String name,[String fileType]) async {
     Directory path = new Directory(savePath);
     Map<PermissionGroup, PermissionStatus> permissions = await PermissionHandler().requestPermissions([PermissionGroup.storage]);
     // 申请结果
@@ -29,9 +29,9 @@ class Download {
       if( !path.existsSync()){
         path.create(recursive: true);
       }
-
       try {
-        await dio.download(url,savePath+name+url.substring(url.lastIndexOf(".")),
+
+        await dio.download(url,(fileType == null) ? savePath+name+url.substring(url.lastIndexOf(".")) : savePath + name + '.' + fileType,
             onReceiveProgress: showDownloadProgress, cancelToken: cancelToken);
       } catch (e) {
         print(e);

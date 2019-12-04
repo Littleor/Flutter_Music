@@ -114,21 +114,24 @@ class _HomeState extends State<Home> {
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      songs['songs'][index]['name'],
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
-                                    ),
-                                    SizedBox(height: 12.0),
-                                    Text(songs['songs'][index]['artists'][0]['name'])
-                                  ],
+                                Expanded(
+                                  flex:8,
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
+                                        songs['songs'][index]['name'],
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16),
+                                      ),
+                                      SizedBox(height: 12.0),
+                                      Text(songs['songs'][index]['artists'][0]['name'])
+                                    ],
+                                  ),
                                 ),
-                                Container(
-                                  margin: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                                Expanded(
+                                  flex: 3,
                                   child: Row(
                                     children: <Widget>[
                                       IconButton(
@@ -193,12 +196,6 @@ class _HomeState extends State<Home> {
 //                                                  action: SnackBarAction(
 //                                                      label: "查看",
 //                                                      onPressed:() async{
-////                                                        const url = 'http://sdcard/EasyMusic/Download/';
-////                                                        if (await canLaunch(url)) {
-////                                                        await launch(url);
-////                                                        } else {
-////                                                        print("Error to open $url");
-////                                                        }
 //                                                      }
 //                                                  ),
                                                 ));
