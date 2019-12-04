@@ -27,7 +27,6 @@ class _HomeState extends State<Home> {
   }
   void getData() async {
     Map result = await SearchSongs.get(keyword: keyWordController.text);
-    print(result['total']);
     setState(() {
       songs = result;
     });
@@ -107,7 +106,6 @@ class _HomeState extends State<Home> {
                   child: ListView.builder(
               itemCount: songs['limit'],
               itemBuilder: (context, index) {
-              //  print(songs['songs']);
                   return Card(
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(20, 30, 0, 30),
@@ -165,7 +163,6 @@ class _HomeState extends State<Home> {
                                           onPressed: () async {
                                             Map result =
                                             await Url.get(songs['songs'][index]['id']);
-                                            print("Download ${result['url']}");
                                             Download music =  new Download();
                                             music.download( result['url'], "/sdcard/EasyMusic/Download/",songs['songs'][index]['name']+'-'+songs['songs'][index]['artists'][0]['name']);
                                             Scaffold.of(context).showSnackBar(SnackBar(

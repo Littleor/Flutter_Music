@@ -19,7 +19,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^0.12.0+2
   dio: ^3.0.7
   cupertino_icons: ^0.1.2
   flutter_exoplayer: ^0.5.4
