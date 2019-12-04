@@ -36,7 +36,7 @@ class _LoadState extends State<Load> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: !adExist ? AssetImage('assets/ad.jpg') : AssetImage('/sdcard/EasyMusic/Images/ad.png'),
+              image: !adExist ? AssetImage('assets/images/ad.jpg') : AssetImage('/sdcard/EasyMusic/Images/ad.png'),
               fit: BoxFit.cover,
           ),
         ),
