@@ -1,4 +1,4 @@
-package com.example.music
+package com.sixming.music
 
 import android.os.Bundle
 

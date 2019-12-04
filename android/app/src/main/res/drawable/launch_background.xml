@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
     <!-- Modify this file to customize your launch splash screen -->
+
     <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="AppTheme.FullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:clipToPadding">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
         <item android:drawable="@android:color/white" />
         <!-- You can insert your own image assets here -->
         <item>
