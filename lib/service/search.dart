@@ -13,6 +13,7 @@ class SearchSongs{
       int total = data["result"]["songCount"];
       for(Map song in songs){
         song['play'] = false;
+        song['color'] = -1;
       }
         Map result = {
           'songs' : songs,

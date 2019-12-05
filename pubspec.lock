@@ -57,6 +57,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "3.0.7"
+  floating_search_bar:
+    dependency: "direct main"
+    description:
+      path: "floating_search_bar-0.2.0-music"
+      relative: true
+    source: path
+    version: "0.2.0"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -69,6 +76,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.5.4"
+  flutter_staggered_animations:
+    dependency: "direct main"
+    description:
+      name: flutter_staggered_animations
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.2"
   flutter_test:
     dependency: "direct dev"
     description: flutter
