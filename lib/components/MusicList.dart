@@ -35,44 +35,55 @@ class MusicList extends StatelessWidget {
     }
     else{
       Map result =await Url.get(song['id']);
-      Download music =  new Download();
-      music.download( result['url'], "/sdcard/EasyMusic/Download/",song['name'].replaceAll("/", "\\")+'-'+getSingers(song).replaceAll("/", "\\"));
-      Scaffold.of(context).showSnackBar(SnackBar(
-        content:Text("正在下载 : ${song['name']}"),
-        action: SnackBarAction(
-            label: "取消",
-            onPressed:(){
-              music.cancelToken.cancel("cancelled");
-              if(music.cancelToken.isCancelled){
-                Scaffold.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text("已取消下载${song['name']}"),
-                    )
-                );
+      if(result['url'] != null){
+        Download music =  new Download();
+        music.download( result['url'], "/sdcard/EasyMusic/Download/",song['name'].replaceAll("/", "\\")+'-'+getSingers(song).replaceAll("/", "\\"));
+        Scaffold.of(context).showSnackBar(SnackBar(
+          content:Text("正在下载 : ${song['name']}"),
+          action: SnackBarAction(
+              label: "取消",
+              onPressed:(){
+                music.cancelToken.cancel("cancelled");
+                if(music.cancelToken.isCancelled){
+                  Scaffold.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text("已取消下载${song['name']}"),
+                      )
+                  );
+                }
               }
-            }
-        ),
-      ));
-      Timer.periodic(Duration(milliseconds: 300),(timer){
-        if(music.progress == 100) {
-          timer.cancel();
-          timer = null;
-          Scaffold.of(context).showSnackBar(SnackBar(
-            content: Text("${song['name']}下载完成,已保存到/EasyMusic/Download/下."),
+          ),
+        ));
+        Timer.periodic(Duration(milliseconds: 300),(timer){
+          if(music.progress == 100) {
+            timer.cancel();
+            timer = null;
+            Scaffold.of(context).showSnackBar(SnackBar(
+              content: Text("${song['name']}下载完成,已保存到/EasyMusic/Download/下."),
 //                                                  action: SnackBarAction(
 //                                                      label: "查看",
 //                                                      onPressed:() async{
 //                                                      }
 //                                                  ),
-          )
-          );
-        }
-        Map result = {
-          'index': this.index,
-          'color': ((music.progress != 100) ? (music.progress/20).ceil()*100 : 600),
-        };
-        callback(result);
-      });
+            )
+            );
+          }
+          Map result = {
+            'index': this.index,
+            'color': ((music.progress != 100) ? (music.progress/20).ceil()*100 : 600),
+          };
+          callback(result);
+        });
+      }
+      else{
+        Scaffold.of(context).showSnackBar(
+            SnackBar(
+              content: Text(
+                  "获取歌曲链接失败-请在侧滑栏-关于我们-联系作者-Littleor反馈！"),
+            )
+        );
+      }
+
     }
 
   }

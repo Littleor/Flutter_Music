@@ -1,16 +1,27 @@
-# music
+# 极简音符
 
-A new Flutter project.
+> A Music Downloader by flutter! 
 
-## Getting Started
+> 欢迎来到 极简影院/音符 QQ交流群：826352486 
 
-This project is a starting point for a Flutter application.
+> 特别鸣谢：Bubblegum&Lemonade 提供友情赞助 图标！
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+![主界面截图](images/1.jpg)
+![搜索截图](images/2.jpg)
+![侧滑截图](images/3.jpg)
+## 简介 
+刚刚学了学Flutter，然后打算做点什么，就做了这个。
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+整体设计只能是差强人意，希望以后能设计更好的界面吧。
+
+借用[网易云API](https://github.com/Binaryify/NeteaseCloudMusicApi)开发的一个Flutter下载音乐应用.
+
+## 使用 
+```bash
+git clone https://github.com/Littleor/Flutter_Music
+cd Flutter_Music
+flutter pub get
+flutter run
+#flutter build apk #打包APK
+```
