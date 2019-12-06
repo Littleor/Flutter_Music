@@ -14,9 +14,10 @@
     <application
         android:usesCleartextTraffic="true"
         android:name="io.flutter.app.FlutterApplication"
-        android:label="极简音符"
+        android:label="@string/app_name"
         android:icon="@mipmap/ic_launcher">
         <activity
+            android:label="@string/app_name"
             android:name=".MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"

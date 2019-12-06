@@ -20,7 +20,7 @@ dependencies:
   flutter:
     sdk: flutter
   dio: ^3.0.7
-  cupertino_icons: ^0.1.2
+#  cupertino_icons: ^0.1.2
   flutter_exoplayer: ^0.5.4
   permission_handler: ^4.0.0
   package_info: ^0.4.0+12

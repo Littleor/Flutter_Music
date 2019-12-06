@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:music/service/search.dart';
-import 'package:flutter_exoplayer/audioplayer.dart';
+//import 'package:flutter_exoplayer/audioplayer.dart';
 import 'package:music/components/MusicList.dart';
 import 'dart:io';
 import 'package:flutter/services.dart';
@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
   Map songs = {'limit': 0, 'songs': [], 'total': 0};
   final keyWordController = TextEditingController();
   FocusNode keyWordFocus = FocusNode();
-  AudioPlayer audioPlayer = AudioPlayer();
+//  AudioPlayer audioPlayer = AudioPlayer();
   String version;
   List<String> words = [
     "老铁,来听歌？",

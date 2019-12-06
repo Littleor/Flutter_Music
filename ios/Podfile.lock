@@ -1,7 +1,5 @@
 PODS:
   - Flutter (1.0.0)
-  - flutter_exoplayer (0.5.4):
-    - Flutter
   - package_info (0.0.1):
     - Flutter
   - permission_handler (4.0.0):
@@ -11,7 +9,6 @@ PODS:
 
 DEPENDENCIES:
   - Flutter (from `.symlinks/flutter/ios`)
-  - flutter_exoplayer (from `.symlinks/plugins/flutter_exoplayer/ios`)
   - package_info (from `.symlinks/plugins/package_info/ios`)
   - permission_handler (from `.symlinks/plugins/permission_handler/ios`)
   - url_launcher (from `.symlinks/plugins/url_launcher/ios`)
@@ -19,8 +16,6 @@ DEPENDENCIES:
 EXTERNAL SOURCES:
   Flutter:
     :path: ".symlinks/flutter/ios"
-  flutter_exoplayer:
-    :path: ".symlinks/plugins/flutter_exoplayer/ios"
   package_info:
     :path: ".symlinks/plugins/package_info/ios"
   permission_handler:
@@ -30,7 +25,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
-  flutter_exoplayer: 295b78934292b411c4ddeec4ea2688bb0e4e8675
   package_info: 48b108e75b8802c2d5e126f208ef540561c98aef
   permission_handler: 0fb88b8a3c23e31e5de45b8f1bb8b7de28cf8941
   url_launcher: a1c0cc845906122c4784c542523d8cacbded5626
