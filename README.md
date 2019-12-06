@@ -6,10 +6,14 @@
 
 > 特别鸣谢：Bubblegum&Lemonade 提供友情赞助 图标！
 
-
-![主界面截图](images/1.jpg)
-![搜索截图](images/2.jpg)
-![侧滑截图](images/3.jpg)
+<div align="center">  
+<img src="images/1.jpg" width="20%">
+<img src="images/2.jpg" width="20%">
+<img src="images/3.jpg" width="20%">
+</div>
+<!--![主界面截图](images/1.jpg){:width="30px"}-->
+<!--![搜索截图](images/2.jpg)-->
+<!--![侧滑截图](images/3.jpg)-->
 ## 简介 
 刚刚学了学Flutter，然后打算做点什么，就做了这个。
 
