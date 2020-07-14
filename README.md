@@ -2,7 +2,7 @@
 
 > A Music Downloader by flutter! 
 
-> 欢迎来到 极简影院/音符 QQ交流群：826352486 
+> 任何问题欢迎提issue
 
 > 特别鸣谢：Bubblegum&Lemonade 提供友情赞助 图标！
 
